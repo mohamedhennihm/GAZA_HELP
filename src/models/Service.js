@@ -4,24 +4,13 @@ const serviceSchema = new Schema({
   
   // Service Details
   title: { type: String, required: true },
-  titleAr: { type: String },
   description: { type: String, required: true },
-  descriptionAr: { type: String },
   
-  category: { type: Schema.Types.ObjectId, ref: 'ServiceCategory', required: true },
+  proffession:{type:String, required:true},
 
   
-  // Pricing Information
-  pricing: {
-    basePrice: { type: Number, required: true }, // Base price in service credits
-    // priceType: { 
-    //   type: String, 
-    //   enum: ['per_hour', 'per_day', 'per_project', 'negotiable'],
-    //   default: 'negotiable'
-    // },
-    minPrice: { type: Number }, // Minimum acceptable price
-    maxPrice: { type: Number }, // Maximum price
-  },
+  // Pricing Information will be changed
+  pricing: {type:Number ,immutable:true },
 
   
   // Media
