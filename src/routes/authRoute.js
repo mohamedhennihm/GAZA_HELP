@@ -3,7 +3,6 @@ import { register,login,logout } from "../controllers/authController.js";
 
 const authRoute = Router()
 
-
 authRoute.post("/register",register);
 
 authRoute.post("/login",login);

@@ -1,12 +1,10 @@
 import express from "express";
-import { config } from "dotenv";
-import authRoute from "./routes/authRoute.js";
-import { connectDB } from "./config/db.js";
+import { PORT } from "./src/config/env.js";
+import authRoute from "./src/routes/authRoute.js";
+import { connectDB } from "./src/config/db.js";
 
-config(); 
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 
 
 app.use(express.json());
