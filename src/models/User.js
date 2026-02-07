@@ -6,7 +6,6 @@ const userSchema = new Schema(
     password:          { type: String, required: true, minlength: 8 },
     phone:             { type: String, default: '' },
     location:          { type: String, default: '', enum: ['', 'Gaza City', 'Khan Younis', 'Rafah', 'Deir al-Balah', 'Jabalia', 'Beit Hanoun', 'Beit Lahia', 'Nuseirat', 'Other'] },
-    profession:        { type: String, default: '', enum: ['', 'Doctor', 'Nurse', 'Teacher', 'Engineer', 'Carpenter', 'Plumber', 'Electrician', 'Web Developer', 'Designer', 'Cook', 'Driver', 'Mechanic', 'Tailor', 'Barber', 'Pharmacist', 'Photographer', 'Translator', 'Other'] },
     authProvider:      { type: String, default: 'local' },
     avatar:            { type: String, default: '👤' },
     points:            { type: Number, default: 50 },
